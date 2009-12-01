@@ -1,0 +1,109 @@
+﻿/*ajax modal*/
+#modal
+{
+	background-color:#eee;
+	-ms-filter: alpha(opacity=50);
+	-ms-opacity: 0.5;
+	width:200px;
+	height:200px;
+}
+.eventModal
+{
+	-ms-filter: alpha(opacity=50);
+	-ms-opacity: 0.5;
+	width:300px;
+	height:250px;
+	background-color:#ffff00;
+	border:1px solid #cccccc; 
+}
+.moveModal
+{ 
+     padding:3px;     
+	 background-color:#eee;
+	 border:1px solid black;
+	 width: 150px;
+	 background-position:center;
+	 float:left;
+}
+.modalbutton
+{
+	background-color:ThreeDLighShadow;
+	color:black;
+	font-weight:bold;
+	width:100px;
+}
+.errorModal
+{
+	height:200px;
+	width:300px;
+	padding:20px 20px 20px 20px;
+	background-color:red;
+	border:2px black;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+}
+.addressModal
+{
+	background-color:#eee;
+    border-color:black; 
+    border-style:Solid; 
+    border-width:1px; 
+    Width:200px; 
+    Height:200px;
+}
+
+/*data list*/
+.dtlMain
+{
+	border-collapse:collapse;	
+	background:#E3EAEB;
+	color:#000; 
+}
+.dtlMain th
+{
+	font-weight:300;
+}
+.dtlMain tr
+{
+	border-bottom:1px solid #000;
+}
+.dtlMain td
+{
+	padding:5px;
+}
+.dtlSelected
+{
+	color:Yellow;
+	display:block;
+}
+.dtlHeader
+{
+	background-color:#33cc66;
+}
+/*dtl Pager*/
+.paging
+{
+	width:100%;
+	border:0;
+	margin-top:30px;
+}
+#leftDiv
+{
+	float:left;
+	width:180px;
+	text-align:center;
+}
+
+#rightDiv
+{
+	float:right;
+	width:180px;
+	margin-right:20px;
+	text-align:center;
+}
+#numDiv
+{
+	float:inherit;
+	text-align:center;
+}

@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AceMail.Master.cs" Inherits="AceMail.AceMail" %>
+<!--
+Copyright 2009 Andrew Miller
+Distributed under the terms of the GNU General Public License
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head" runat="server">
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>AceMail</title>
+    <link href="~/CSS/Style.css" rel="Stylesheet" type="text/css" />
+
+    <script type="text/javascript" src='<%= ResolveUrl("~/scripts/jquery-1.3.2.min.js") %>'></script>
+
+    <script type="text/javascript" src='<%= ResolveUrl("~/scripts/ui.core.js") %>'></script>
+
+    <script type="text/javascript" src='<%= ResolveUrl("~/scripts/jquery-ui-1.7.1.custom.min.js") %>'></script>
+
+    <script type="text/javascript" src='<%= ResolveUrl("~/scripts/ui.dialog.js") %>'></script>
+
+</head>
+<body>
+    <form id="Form" runat="server">
+    <asp:ScriptManager ID="ScriptManager" runat="server" />
+    <div id="wrap">
+        <div id="main">
+            <div id="header">
+                <div id="logo">
+                    <h1>
+                        AceMail</h1>
+                    <h2>
+                        ASP.NET Mail Portal</h2>
+                </div>
+                <div id="nologo">
+                    <div id="header-menu">
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="btnHome" Text="Home" OnClick="btnHome_Click" runat="server" /></li>
+                            <li>
+                                <asp:LinkButton ID="btnMail" Text="Mail" OnClick="btnMail_Click" runat="server" /></li>
+                            <li>
+                                <asp:LinkButton ID="btnContact" Text="Contacts" OnClick="btnContact_Click" runat="server" /></li>
+                            <li>
+                                <asp:LinkButton ID="btnFiles" Text="Files" OnClick="btnFiles_Click" runat="server" /></li>
+                            <li>
+                                <asp:LinkButton ID="btnAdmin" Text="Admin" OnClick="btnAdmin_Click" Visible="false"
+                                    runat="server" /></li>
+                        </ul>
+                    </div>
+                    <div id="logout">
+                        You are logged in as:&nbsp;<b><asp:Label ID="lblName" runat="server" /></b>&nbsp;&nbsp;
+                        <asp:LinkButton ID="btnLogout" Text="Logout" OnClick="btnLogout_Click" runat="server" />
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="Body" runat="server" />
+            </div>
+        </div>
+        <div id="footer">
+            <i>AceMail&#169;2009</i></div>
+    </div>
+    </form>
+</body>
+</html>
