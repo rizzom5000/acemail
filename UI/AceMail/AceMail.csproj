@@ -1,0 +1,264 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7BDBB383-A850-4C94-A4C0-C2BC12D2B7AC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AceMail</RootNamespace>
+    <AssemblyName>AceMail</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataObjects\DataObjects\bin\Release\DataObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.21146, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataObjects\DataObjects\bin\Release\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="hMail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataObjects\hMail\hMail\bin\Release\hMail.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic, Version=2.1.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataObjects\DataObjects\bin\Debug\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContactManager.aspx" />
+    <Content Include="ContactView.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="FileManager.aspx" />
+    <Content Include="FileView.aspx" />
+    <Content Include="MailCreate.aspx" />
+    <Content Include="MailManager.aspx" />
+    <Content Include="MailOptions.aspx" />
+    <Content Include="MailView.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminManager.aspx.cs">
+      <DependentUpon>AdminManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminManager.aspx.designer.cs">
+      <DependentUpon>AdminManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactManager.aspx.cs">
+      <DependentUpon>ContactManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactManager.aspx.designer.cs">
+      <DependentUpon>ContactManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactView.aspx.cs">
+      <DependentUpon>ContactView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactView.aspx.designer.cs">
+      <DependentUpon>ContactView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ContactDataList.ascx.cs">
+      <DependentUpon>ContactDataList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ContactDataList.ascx.designer.cs">
+      <DependentUpon>ContactDataList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ErrorPopUp.ascx.cs">
+      <DependentUpon>ErrorPopUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ErrorPopUp.ascx.designer.cs">
+      <DependentUpon>ErrorPopUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FileDataList.ascx.cs">
+      <DependentUpon>FileDataList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FileDataList.ascx.designer.cs">
+      <DependentUpon>FileDataList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FolderPopUp.ascx.cs">
+      <DependentUpon>FolderPopUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FolderPopUp.ascx.designer.cs">
+      <DependentUpon>FolderPopUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MailGridView.ascx.cs">
+      <DependentUpon>MailGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MailGridView.ascx.designer.cs">
+      <DependentUpon>MailGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NoticePopUp.ascx.cs">
+      <DependentUpon>NoticePopUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NoticePopUp.ascx.designer.cs">
+      <DependentUpon>NoticePopUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserGridView.ascx.cs">
+      <DependentUpon>UserGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UserGridView.ascx.designer.cs">
+      <DependentUpon>UserGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager.aspx.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager.aspx.designer.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileView.aspx.cs">
+      <DependentUpon>FileView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileView.aspx.designer.cs">
+      <DependentUpon>FileView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AceMail.Master.cs">
+      <DependentUpon>AceMail.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AceMail.Master.designer.cs">
+      <DependentUpon>AceMail.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MailCreate.aspx.cs">
+      <DependentUpon>MailCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailCreate.aspx.designer.cs">
+      <DependentUpon>MailCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailManager.aspx.cs">
+      <DependentUpon>MailManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailManager.aspx.designer.cs">
+      <DependentUpon>MailManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailOptions.aspx.cs">
+      <DependentUpon>MailOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailOptions.aspx.designer.cs">
+      <DependentUpon>MailOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailView.aspx.cs">
+      <DependentUpon>MailView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailView.aspx.designer.cs">
+      <DependentUpon>MailView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminManager.aspx" />
+    <Content Include="Controls\ContactDataList.ascx" />
+    <Content Include="Controls\ErrorPopUp.ascx" />
+    <Content Include="Controls\FileDataList.ascx" />
+    <Content Include="Controls\FolderPopUp.ascx" />
+    <Content Include="Controls\MailGridView.ascx" />
+    <Content Include="Controls\NoticePopUp.ascx" />
+    <Content Include="Controls\UserGridView.ascx" />
+    <Content Include="CSS\Style.css" />
+    <Content Include="CSS\ui.base.css" />
+    <Content Include="CSS\ui.core.css" />
+    <Content Include="CSS\ui.datepicker.css" />
+    <Content Include="CSS\ui.dialog.css" />
+    <Content Include="CSS\ui.theme.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="AceMail.Master" />
+    <Content Include="Images\cal.png" />
+    <Content Include="license.txt" />
+    <Content Include="Scripts\fckconfig.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.7.1.custom.min.js" />
+    <Content Include="Scripts\ui.core.js" />
+    <Content Include="Scripts\ui.datepicker.js" />
+    <Content Include="Scripts\ui.dialog.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56185</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

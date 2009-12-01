@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0020387-0289-4C96-85F0-238CFAF22DFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataObjects</RootNamespace>
+    <AssemblyName>DataObjects</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FileManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FileManager\bin\Debug\FileManager.dll</HintPath>
+    </Reference>
+    <Reference Include="hMail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\hMail\hMail\bin\Debug\hMail.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.1.4.0, Culture=neutral, PublicKeyToken=e9238d4446c6cba1, processorArchitecture=MSIL" />
+    <Reference Include="SubSonic, Version=2.1.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Generated\AllStructs.cs" />
+    <Compile Include="Generated\Client.cs" />
+    <Compile Include="Generated\ClientController.cs" />
+    <Compile Include="Generated\Clientdependent.cs" />
+    <Compile Include="Generated\ClientdependentController.cs" />
+    <Compile Include="Generated\Email.cs" />
+    <Compile Include="Generated\EmailController.cs" />
+    <Compile Include="Generated\Eml.cs" />
+    <Compile Include="Generated\EmlController.cs" />
+    <Compile Include="Generated\File.cs" />
+    <Compile Include="Generated\FileController.cs" />
+    <Compile Include="Generated\Group.cs" />
+    <Compile Include="Generated\Groupclient.cs" />
+    <Compile Include="Generated\GroupclientController.cs" />
+    <Compile Include="Generated\GroupController.cs" />
+    <Compile Include="Generated\Notice.cs" />
+    <Compile Include="Generated\Noticeclient.cs" />
+    <Compile Include="Generated\NoticeclientController.cs" />
+    <Compile Include="Generated\NoticeController.cs" />
+    <Compile Include="Generated\Noticeeml.cs" />
+    <Compile Include="Generated\NoticeemlController.cs" />
+    <Compile Include="Generated\Noticefile.cs" />
+    <Compile Include="Generated\NoticefileController.cs" />
+    <Compile Include="Generated\Noticegroup.cs" />
+    <Compile Include="Generated\NoticegroupController.cs" />
+    <Compile Include="Generated\Referral.cs" />
+    <Compile Include="Generated\ReferralController.cs" />
+    <Compile Include="Generated\StoredProcedures.cs" />
+    <Compile Include="Generated\User.cs" />
+    <Compile Include="Generated\Userclient.cs" />
+    <Compile Include="Generated\UserclientController.cs" />
+    <Compile Include="Generated\UserController.cs" />
+    <Compile Include="Generated\Usercredential.cs" />
+    <Compile Include="Generated\UsercredentialController.cs" />
+    <Compile Include="Generated\Usereml.cs" />
+    <Compile Include="Generated\UseremlController.cs" />
+    <Compile Include="Generated\Userfile.cs" />
+    <Compile Include="Generated\UserfileController.cs" />
+    <Compile Include="Generated\Usergroup.cs" />
+    <Compile Include="Generated\UsergroupController.cs" />
+    <Compile Include="Generated\Usernotice.cs" />
+    <Compile Include="Generated\UsernoticeController.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UserInstance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="license.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
