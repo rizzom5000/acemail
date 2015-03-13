@@ -1,0 +1,1 @@
+AceMail consists of an ASP.NET front-end for hMailServer 4.4.3, the last stable release of hMailServer under the GPL. AceMail includes a MySql based address book.
